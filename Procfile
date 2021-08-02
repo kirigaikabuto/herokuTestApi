@@ -1,1 +1,1 @@
-web: ./bin/herokuTestApi
+web: /bin/herokuTestApi
