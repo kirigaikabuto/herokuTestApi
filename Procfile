@@ -1,1 +1,1 @@
-web: /bin/hekoruTestApi
+web: bin/hekoruTestApi
