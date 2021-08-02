@@ -1,6 +1,6 @@
 module github.com/kirigaikabuto/hekoruTestApi
 
-go 1.13
+go 1.12
 
 require (
 	github.com/gorilla/mux v1.8.0
