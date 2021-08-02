@@ -7,6 +7,7 @@ import (
 	"encoding/json"
 	"github.com/gorilla/mux"
 	_ "github.com/heroku/x/hmetrics/onload"
+	"os"
 )
 
 type Article struct {
@@ -28,6 +29,7 @@ func returnAllArticles(w http.ResponseWriter, r *http.Request){
 }
 
 func handleRequests() {
+	port := os.Getenv("PORT")
 	// creates a new instance of a mux router
 	myRouter := mux.NewRouter().StrictSlash(true)
 	// replace http.HandleFunc with myRouter.HandleFunc
@@ -36,7 +38,7 @@ func handleRequests() {
 	// finally, instead of passing in nil, we want
 	// to pass in our newly created router as the second
 	// argument
-	log.Fatal(http.ListenAndServe(":80", myRouter))
+	log.Fatal(http.ListenAndServe(":"+port, myRouter))
 }
 
 func main() {
