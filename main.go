@@ -6,6 +6,7 @@ import (
 	"net/http"
 	"encoding/json"
 	"github.com/gorilla/mux"
+	_ "github.com/heroku/x/hmetrics/onload"
 )
 
 type Article struct {
