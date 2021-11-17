@@ -28,7 +28,7 @@ func returnAllArticles(w http.ResponseWriter, r *http.Request){
 }
 
 func handleRequests() {
-	port := "3000"
+	port := "8080"
 	// creates a new instance of a mux router
 	myRouter := mux.NewRouter().StrictSlash(true)
 	// replace http.HandleFunc with myRouter.HandleFunc
