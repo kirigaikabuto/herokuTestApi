@@ -1,13 +1,12 @@
 package main
 
 import (
-	"fmt"
-	"log"
-	"net/http"
 	"encoding/json"
+	"fmt"
 	"github.com/gorilla/mux"
 	_ "github.com/heroku/x/hmetrics/onload"
-	"os"
+	"log"
+	"net/http"
 )
 
 type Article struct {
@@ -29,7 +28,7 @@ func returnAllArticles(w http.ResponseWriter, r *http.Request){
 }
 
 func handleRequests() {
-	port := os.Getenv("PORT")
+	port := "3000"
 	// creates a new instance of a mux router
 	myRouter := mux.NewRouter().StrictSlash(true)
 	// replace http.HandleFunc with myRouter.HandleFunc
